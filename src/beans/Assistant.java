@@ -7,6 +7,11 @@ public class Assistant implements Serializable {
     private String firstName;
     private String lastName;
 
+    public Assistant() {
+        this.firstName = "";
+        this.lastName = "";
+    }
+
     public Assistant(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;

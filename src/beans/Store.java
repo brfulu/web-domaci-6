@@ -25,7 +25,7 @@ public class Store implements Serializable {
         return reviews;
     }
 
-    public void setReviews(List<Review> reviews) {
+    public synchronized void setReviews(List<Review> reviews) {
         this.reviews = reviews;
     }
 }

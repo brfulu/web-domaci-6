@@ -6,6 +6,11 @@ public class Review implements Serializable {
     private Assistant assistant;
     private int rating;
 
+    public Review() {
+        this.assistant = null;
+        this.rating = 0;
+    }
+
     public Review(Assistant assistant, int rating) {
         this.assistant = assistant;
         this.rating = rating;

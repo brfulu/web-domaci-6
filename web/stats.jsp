@@ -26,10 +26,10 @@
 <hr>
 
 <h3>
-    <a href="review-form.html">Enter new review</a>
+    <a href="review-form.jsp">Enter new review</a>
 </h3>
 
-<c:set var="Date" value="<%=new java.util.Date()%>"/>
-<fmt:formatDate type="date" value="${Date}"/>
+<jsp:useBean id="today" class="java.util.Date" scope="page" />
+<fmt:formatDate type="date" value="${today}"/>
 </body>
 </html>
