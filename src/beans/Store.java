@@ -1,9 +1,10 @@
 package beans;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Store {
+public class Store implements Serializable {
     private List<Review> reviews;
 
     public Store() {
@@ -22,5 +23,9 @@ public class Store {
 
     public synchronized List<Review> getReviews() {
         return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
     }
 }

@@ -10,14 +10,26 @@
 </head>
 <body>
 <h2>Review Stats:</h2>
+<c:if test="${empty requestScope.ratings}">
+    Nema nijedan unos!
+</c:if>
+
 <ul>
     <c:forEach var="entry" items="${requestScope.ratings}">
         <li>
-            <c:out value="${entry.key}"/>: <c:out value="${entry.value}"/>
+            <c:out value="${entry.key}"/>:
+            <fmt:formatNumber type="number" maxFractionDigits="2" value="${entry.value}"/>
         </li>
     </c:forEach>
 </ul>
-<br>
-<h3><a href="review-form.html">Enter new review</a></h3>
+
+<hr>
+
+<h3>
+    <a href="review-form.html">Enter new review</a>
+</h3>
+
+<c:set var="Date" value="<%=new java.util.Date()%>"/>
+<fmt:formatDate type="date" value="${Date}"/>
 </body>
 </html>

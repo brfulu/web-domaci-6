@@ -1,6 +1,8 @@
 package beans;
 
-public class Review {
+import java.io.Serializable;
+
+public class Review implements Serializable {
     private Assistant assistant;
     private int rating;
 
@@ -19,5 +21,9 @@ public class Review {
 
     public void setRating(int rating) {
         this.rating = rating;
+    }
+
+    public void setAssistant(Assistant assistant) {
+        this.assistant = assistant;
     }
 }

@@ -30,15 +30,6 @@ public class ReviewServlet extends HttpServlet {
         RequestDispatcher disp = request.getRequestDispatcher("index.jsp");
         request.setAttribute("message", "Review successfully saved!");
         disp.forward(request, response);
-
-//        response.setContentType("text/html");
-//        PrintWriter out = response.getWriter();
-//        out.println("<head><title>Leave a review</title></head>");
-//        out.println("<body><h2>Review successfully saved:</h2>");
-//        out.println("<h3><a href=\"review-form.html\">Enter new review</a></h3>");
-//        out.println("<h3><a href=\"review\">See stats</a></h3>");
-//        out.println("</body>");
-//        out.close();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

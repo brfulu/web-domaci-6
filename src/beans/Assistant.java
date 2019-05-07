@@ -1,8 +1,9 @@
 package beans;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Assistant {
+public class Assistant implements Serializable {
     private String firstName;
     private String lastName;
 
